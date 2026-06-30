@@ -50,6 +50,15 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
+export default function App() {
+  return (
+    <>
+      <NavBar />
+      <Main />
+    </>
+  );
+}
+
 function NavBar() {
   const [query, setQuery] = useState("");
 
@@ -76,7 +85,7 @@ function NavBar() {
   );
 }
 
-export default function App() {
+function Main() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
   const [isOpen1, setIsOpen1] = useState(true);
@@ -88,8 +97,6 @@ export default function App() {
 
   return (
     <>
-      <NavBar />
-
       <main className="main">
         <div className="box">
           <button
