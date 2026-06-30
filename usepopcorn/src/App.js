@@ -65,9 +65,7 @@ function NavBar() {
       <nav className="nav-bar">
         <Logo />
         <Search />
-        <p className="num-results">
-          Found <strong>X</strong> results
-        </p>
+        <NumResults />
       </nav>
       ;
     </>
@@ -93,6 +91,14 @@ function Logo() {
       <span role="img">🍿</span>
       <h1>usePopcorn</h1>
     </div>
+  );
+}
+
+function NumResults() {
+  return (
+    <p className="num-results">
+      Found <strong>X</strong> results
+    </p>
   );
 }
 
